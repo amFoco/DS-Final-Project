@@ -56,10 +56,10 @@ class Craigslist:
 
 
 url = [
-    'https://wichita.craigslist.org/search/cta?sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&min_price=500&auto_make_model=ford+mustang&min_auto_year=1980&auto_cylinders=4&auto_cylinders=5&auto_transmission=1',
-    'https://wichita.craigslist.org/search/cta?query=nissan+350z&sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&min_price=500&auto_make_model=nissan+350z&auto_transmission=1',
-    'https://wichita.craigslist.org/search/cta?query=subaru+wrx&sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&min_price=500&auto_make_model=subaru+wrx&auto_transmission=1',
-    'https://wichita.craigslist.org/search/cta?sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&auto_make_model=mazda+miata&auto_transmission=1'
+    r'https://wichita.craigslist.org/search/cta?sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&min_price=500&auto_make_model=ford+mustang&min_auto_year=1980&auto_cylinders=4&auto_cylinders=5&auto_transmission=1',
+    r'https://wichita.craigslist.org/search/cta?query=nissan+350z&sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&min_price=500&auto_make_model=nissan+350z&auto_transmission=1',
+    r'https://wichita.craigslist.org/search/cta?query=subaru+wrx&sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&min_price=500&auto_make_model=subaru+wrx&auto_transmission=1',
+    r'https://wichita.craigslist.org/search/cta?sort=priceasc&purveyor-input=all&hasPic=1&bundleDuplicates=1&search_distance=10000&postal=67220&auto_make_model=mazda+miata&auto_transmission=1'
 ]
 car = [
     'Mustang',

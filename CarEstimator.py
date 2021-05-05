@@ -23,8 +23,3 @@ import sqlite3 as sq
 from bs4 import BeautifulSoup
 
 # 6/8 cyls, 
-
-craigslist_urls[
-    'https://wichita.craigslist.org/search/sss?query=ford+mustang&sort=priceasc&purveyor-input=all&srchType=T&hasPic=1&search_distance=5000&postal=67220&min_price=1000&auto_transmission=1',
-    
-]
