@@ -5,9 +5,9 @@ import pandas as pd
 class Ebay:
     data = pd.DataFrame()
     try:
-        writer = pd.ExcelWriter('CarData.xlsx', mode='a')
+        writer = pd.ExcelWriter('CarData_ebay.xlsx', mode='a')
     except FileNotFoundError:
-        writer = pd.ExcelWriter('CarData.xlsx')
+        writer = pd.ExcelWriter('CarData_ebay.xlsx')
 
     def __init__(self, url, car):
         response = get(url)

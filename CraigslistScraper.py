@@ -6,7 +6,7 @@ class Craigslist:
     years = range(1980,2021)
     years2 = range(0, 100)
     data = pd.DataFrame()
-    writer = pd.ExcelWriter('CarData_craigslist.xlsx', mode='wa')
+    writer = pd.ExcelWriter('CarData_craigslist.xlsx', mode='w')
 
     def __init__(self, url, car):
         response = get(url)
@@ -67,7 +67,7 @@ car = [
     'WRX',
     'Miata'
 ]
-Craigslist(url[2], car[2])
+# Craigslist(url[2], car[2])
 for u in range(0, len(url)):
     Craigslist(url[u], car[u])
 
