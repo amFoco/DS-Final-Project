@@ -23,7 +23,7 @@ class TrueCar:
         'Options'
     ]
     year = range(0, 99)
-    years = range(1980, 2021)
+    years = range(1980, 2022)
     def __init__(self, url, car):
         r = get(url)
         soup = BeautifulSoup(r.text, 'html.parser')
@@ -47,8 +47,9 @@ class TrueCar:
                     temp = title.split(" ")
                     for j in temp:
                         try:
-                            if int(j) in years or int(j) in year:
+                            if int(j) in self.years or int(j) in self.year:
                                 yrs = j
+                                break
                         except:
                             pass
 
@@ -75,10 +76,10 @@ class TrueCar:
         self.writer.save()
 
 url = [
-    'https://www.truecar.com/used-cars-for-sale/listings/ford/mustang/location-wichita-ks/?engine[]=6%20Cylinder&engine[]=8%20Cylinder&searchRadius=5000&sort[]=price_asc&titleHistory[]=hide-lemon&titleHistory[]=hide-frame-damage&titleHistory[]=hide-theft-recovery&titleHistory[]=hide-salvage&transmission[]=Manual',
-    'https://www.truecar.com/used-cars-for-sale/listings/nissan/350z/location-wichita-ks/?searchRadius=5000&sort[]=price_asc&titleHistory[]=hide-lemon&titleHistory[]=hide-frame-damage&titleHistory[]=hide-theft-recovery&titleHistory[]=hide-salvage&transmission[]=Manual',
-    'https://www.truecar.com/used-cars-for-sale/listings/subaru/wrx/location-wichita-ks/?searchRadius=5000&sort[]=price_asc&titleHistory[]=hide-lemon&titleHistory[]=hide-frame-damage&titleHistory[]=hide-theft-recovery&titleHistory[]=hide-salvage&transmission[]=Manual',
-    'https://www.truecar.com/used-cars-for-sale/listings/mazda/mx-5-miata/location-wichita-ks/?searchRadius=5000&sort[]=price_asc&titleHistory[]=hide-lemon&titleHistory[]=hide-frame-damage&titleHistory[]=hide-theft-recovery&titleHistory[]=hide-salvage&transmission[]=Manual'
+    'https://www.truecar.com/used-cars-for-sale/listings/ford/mustang/location-wichita-ks/?engine[]=6%20Cylinder&engine[]=8%20Cylinder&searchRadius=5000&sort[]=price_asc&transmission[]=Manual',
+    'https://www.truecar.com/used-cars-for-sale/listings/nissan/350z/location-wichita-ks/?searchRadius=5000&sort[]=price_asc&transmission[]=Manual',
+    'https://www.truecar.com/used-cars-for-sale/listings/subaru/wrx/location-wichita-ks/?searchRadius=5000&sort[]=price_asc&transmission[]=Manual',
+    'https://www.truecar.com/used-cars-for-sale/listings/mazda/mx-5-miata/location-wichita-ks/?searchRadius=5000&sort[]=price_asc&transmission[]=Manual'
 ]
 
 car = [
@@ -87,6 +88,8 @@ car = [
     'WRX',
     'Miata'
 ]
-
-for i in range(0, 4):
-    TrueCar(url[i], car[i])
+url = url[3]
+car = 'Miata'
+TrueCar(url, car)
+# for i in range(0, 4):
+#     TrueCar(url[i], car[i])
